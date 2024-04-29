@@ -1,1 +1,5 @@
 # Island_Perimeter
+
+This program calculates the perimeter of an island represented in a 2D grid. The island is represented by `1`s and water is represented by `0`s. The grid cells are connected horizontally and vertically (not diagonally). The program works by iterating over each cell in the grid. If a cell is part of the island (value is `1`), it adds `4` (representing the maximum possible sides of a cell) to the perimeter. Then it checks each of the four directions (right, down, left, up) around the cell. For each direction, if there is a neighboring island cell, it subtracts `1` from the perimeter (since that side is not exposed). The program handles the edge cases where the cell is on the boundary of the grid using `try/except` blocks to catch `IndexError`. The final calculated perimeter is then returned. The program includes a test case where the grid contains a single cell island. The expected output for this test case is `4`.
+
+I changed the code so it really doesn't need to try and excepts but I was too lazy to get rid of them.
